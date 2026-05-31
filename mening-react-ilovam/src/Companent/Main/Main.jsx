@@ -216,7 +216,7 @@ export default function Main({ t }) {
           </div>
 
           <div className="model-image-side">
-            <img src={} alt="Model Recruitment" className="model-side-img" />
+            <img src={cas} alt="Model Recruitment" className="model-side-img" />
           </div>
 
         </div>
