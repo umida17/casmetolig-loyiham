@@ -83,7 +83,7 @@ export default function Main({ t }) {
                   </div>
                 </div>
 
-                {/* Bo'sh joylar soni */}
+                
                 <p className="seats-info">
                   {t.freeSeats ? t.freeSeats.replace("{seats}", course.seats) : `Свободно ${course.seats} из 15 мест`}
                 </p>
