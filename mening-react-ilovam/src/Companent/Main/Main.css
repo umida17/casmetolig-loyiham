@@ -1,0 +1,315 @@
+/* Asosiy konteyner */
+.main-content-wrapper {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* ================= KURSLAR STILI ================= */
+.courses-section {
+  text-align: center;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.section-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 50px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  position: relative;
+}
+
+.courses-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Kurs kartalari umumiy asosi */
+.course-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px 0 20px; /* pastki qism tugmalar bilan birlashadi */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-top-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.course-tag-label {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.course-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+  height: 54px; /* sarlavhalar bir xil chiziqda turishi uchun */
+}
+
+.course-status-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+
+.course-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.course-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.course-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 12px;
+}
+
+.course-features-list li {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.maneken-img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.seats-info {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* Tugmalar bloki */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -20px; /* kartaning chetlariga yopishishi uchun */
+}
+
+.btn-card-reg {
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-card-more {
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  background: transparent;
+}
+
+/* --- THEME VARIATIONS (Rasmga mos 3 xil ranglar to'plami) --- */
+/* 1. Binafsha mavzu */
+.theme-purple .course-card-title { color: #4338ca; }
+.theme-purple .course-status-badge { background-color: #4338ca; }
+.theme-purple .btn-card-reg { background-color: #4338ca; }
+.theme-purple .btn-card-more { color: #4338ca; background-color: #eedffc; }
+
+/* 2. Yashil mavzu */
+.theme-green .course-card-title { color: #4d7c0f; }
+.theme-green .course-status-badge { background-color: #65a30d; }
+.theme-green .btn-card-reg { background-color: #65a30d; }
+.theme-green .btn-card-more { color: #4d7c0f; background-color: #ecfccb; }
+
+/* 3. Firuza (Teal) mavzu */
+.theme-teal .course-card-title { color: #0f766e; }
+.theme-teal .course-status-badge { background-color: #0d9488; }
+.theme-teal .btn-card-reg { background-color: #0d9488; }
+.theme-teal .btn-card-more { color: #0f766e; background-color: #ccfbf1; }
+
+
+/* Slayder boshqaruvi va nuqtalar */
+.slider-arrow {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+.slider-arrow:hover { background: #f9fafb; transform: scale(1.05); }
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+.slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-dots .dot.active {
+  background: #84cc16;
+  width: 12px;
+  border-radius: 4px;
+}
+
+
+/* ================= BIZ HAQIMIZDA (ABOUT) STILI ================= */
+.about-section-container {
+  margin-top: 140px;
+  padding: 40px 0;
+}
+
+.about-flex-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-media-block {
+  flex: 1;
+}
+
+.about-main-photo {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.about-info-block {
+  flex: 12;
+  max-width: 580px;
+  text-align: left;
+}
+
+.about-mini-tag {
+  font-size: 14px;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-branding-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.brand-green {
+  color: #65a30d;
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.p-highlight { font-size: 16px; color: #4b5563; }
+.p-bold { font-size: 16px; font-weight: 600; color: #1f2937; }
+.p-normal { font-size: 15px; color: #6b7280; line-height: 1.6; }
+
+/* Uzun chiziqli Podrobnee ssilka effekti (Rasmga 100% mos) */
+.about-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #65a30d;
+  transition: color 0.3s;
+}
+
+.long-arrow-line {
+  position: relative;
+  width: 60px;
+  height: 2px;
+  background-color: #65a30d;
+  transition: width 0.3s ease;
+}
+
+.long-arrow-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #65a30d;
+  border-right: 2px solid #65a30d;
+  transform: rotate(45deg);
+}
+
+.about-arrow-link:hover .long-arrow-line {
+  width: 80px;
+}
+
+
+/* --- RESPONSIVE MOBILE VARIANT --- */
+@media (max-width: 992px) {
+  .courses-grid { flex-direction: column; gap: 30px; }
+  .about-flex-layout { flex-direction: column; text-align: center; gap: 40px; }
+  .about-info-block { text-align: center; }
+  .about-arrow-link { justify-content: center; }
+}

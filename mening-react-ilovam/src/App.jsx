@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 // Komponentlarni import qilamiz
 import Header from './Companent/Header/Header'; 
 import Hero from './Companent/Hero/Hero'; 
+// Yangi Main komponentini loyihaga qo'shamiz 🚀
+import Main from './Companent/Main/Main'; 
 
-// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + To'g'rilangan Hero)
+// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + Hero + Main)
 const translations = {
   RU: {
     // Header qismi
@@ -20,7 +22,7 @@ const translations = {
     subtitle: "эстетической косметологии",
     welcome: "Добро пожаловать в ValMari!",
 
-    // Hero qismi (image_b2d3de.jpg rasmiga muvofiq to'liq holatda) 🚀
+    // Hero qismi
     heroBadge: "Бесплатный вебинар",
     heroTitle: "ПРОФЕССИЯ КОСМЕТОЛОГ",
     heroDesc: "Приглашаем на бесплатный вебинар для профессиональных косметологов и интересующихся этой профессией",
@@ -42,7 +44,22 @@ const translations = {
 
     statClientNum: "5500+",
     statClientTitle: "Довольных",
-    statClientSub: "клиентов"
+    statClientSub: "клиентов",
+
+    // ================= NEW: Main (Курсы обучения) qismi =================
+    coursesTitle: "Курсы обучения",
+    forMedics: "Курс для медиков",
+    offline: "Оффлайн",
+    online: "Онлайн",
+    masterClass: "Мастер-класс",
+    freeSeats: "Свободно {seats} из 15 мест",
+
+    // ================= NEW: Main (О нас) qismi =================
+    aboutTitle: "О нас",
+    aboutBrandTitle: "ВЕДУЩИЙ УЧЕБНЫЙ ЦЕНТР ЭСТЕТИЧЕСКОЙ КОСМЕТОЛОГИИ",
+    aboutDesc1: "Описание может быть любое.",
+    aboutDesc2: "Ведущий учебный центр эстетической косметологии.",
+    aboutDesc3: "Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости."
   },
   UZ: {
     // Header qismi
@@ -81,7 +98,22 @@ const translations = {
 
     statClientNum: "5500+",
     statClientTitle: "Mamnun",
-    statClientSub: "mijozlarimiz"
+    statClientSub: "mijozlarimiz",
+
+    // ================= NEW: Main (O'quv kurslari) qismi =================
+    coursesTitle: "O'quv kurslari",
+    forMedics: "Shifokorlar uchun kurs",
+    offline: "Offlayn",
+    online: "Onlayn",
+    masterClass: "Master-klass",
+    freeSeats: "15 ta joydan {seats} tasi bo'sh",
+
+    // ================= NEW: Main (Biz haqimizda) qismi =================
+    aboutTitle: "Biz haqimizda",
+    aboutBrandTitle: "ESTETIK KOSMETOLOGIYA BO'YICHA YETAKCHI O'QUV MARKAZI",
+    aboutDesc1: "Tavsif ixtiyoriy bo'lishi mumkin.",
+    aboutDesc2: "Estetik kosmetologiya bo'yicha yetakchi o'quv markazi.",
+    aboutDesc3: "5 yildan ortiq vaqt davomida biz kosmetologiya, go'zallik, salomatlik va yoshlik industriyasi sohasida sertifikatlangan professional ta'lim kurslarini o'tkazib kelmoqdamiz."
   },
   EN: {
     // Header qismi
@@ -120,7 +152,22 @@ const translations = {
 
     statClientNum: "5500+",
     statClientTitle: "Satisfied",
-    statClientSub: "clients"
+    statClientSub: "clients",
+
+    // ================= NEW: Main (Training Courses) qismi =================
+    coursesTitle: "Training Courses",
+    forMedics: "Course for Medics",
+    offline: "Offline",
+    online: "Online",
+    masterClass: "Master-class",
+    freeSeats: "{seats} of 15 seats available",
+
+    // ================= NEW: Main (About Us) qismi =================
+    aboutTitle: "About Us",
+    aboutBrandTitle: "LEADING TRAINING CENTER OF AESTHETIC COSMETOLOGY",
+    aboutDesc1: "Description can be anything.",
+    aboutDesc2: "Leading training center of aesthetic cosmetology.",
+    aboutDesc3: "For more than 5 years we have been conducting certified professional education courses in the field of cosmetology and the industry of beauty, health and youth."
   }
 };
 
@@ -142,6 +189,10 @@ export default function App() {
 
       {/* Asosiy Banner (Hero) qismi */}
       <Hero t={t} />
+
+      {/* 🌟 YANGI QISM: Saytning o'rta qismi (Kurslar va Biz haqimizda) */}
+      {/* joriy til identifikatorini ham yuboramiz (Main ichida maxsus dinamik matnlar uchun kerak) */}
+      <Main t={{ ...t, currentLang: currentLang }} />
     </div>
   );
 }
