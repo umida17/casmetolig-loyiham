@@ -3,6 +3,7 @@ import './Main.css';
 
 
 import aboutImage from '../../assets/Rectangle 111.png';
+import hom from '../../assets/image (27).png';
 
 export default function Main({ t }) {
 
@@ -78,7 +79,7 @@ export default function Main({ t }) {
                     ))}
                   </ul>
                   <div className="course-avatar-wrapper">
-                    <img src={course.headImg} alt="Course Avatar" className="maneken-img" />
+                    <img src={hom} alt="Course Avatar" className="maneken-img" />
                   </div>
                 </div>
 
@@ -121,7 +122,7 @@ export default function Main({ t }) {
           {/* Chap tomon: Katta rasm */}
           <div className="about-media-block">
             <img 
-              src="https://via.placeholder.com/450x550" // Rasm_b1f262.jpg dagi xonimlar rasmi o'rniga
+              src={aboutImage}
               alt="ValMari Center Live Process" 
               className="about-main-photo"
             />
