@@ -11,6 +11,7 @@ import master from '../../assets/master.png';
 import Карточка from '../../assets/Карточка.png';
 import rect from '../../assets/Rectangle 294.png'
 import rectk from '../../assets/Rectangle 295.png'
+import recta from '../../assets/Rectangle 296.png'
 
 
 
@@ -349,7 +350,7 @@ export default function Main({ t }) {
               <img src={rectk} alt="Promo 2" className="promo-banner-img" />
             </div>
             <div className="offer-promo-card">
-              <img src={rectk} alt="Promo 3" className="promo-banner-img" />
+              <img src={recta} alt="Promo 3" className="promo-banner-img" />
             </div>
           </div>
 
