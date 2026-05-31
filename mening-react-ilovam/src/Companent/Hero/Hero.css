@@ -3,8 +3,7 @@
   background: linear-gradient(135deg, #f0fdf4 0%, #e1fbd4 100%);
   position: relative;
   padding: 100px 0 120px 0; /* padding-top 100px qilib birlashtirildi */
-  
-}
+ }
 
 .hero-container {
   max-width: 1200px;
@@ -14,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  
 }
 
 /* Chap qism dizayni */

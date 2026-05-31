@@ -8,10 +8,14 @@ import casmetika from '../../assets/casmetika.png';
 import cas from '../../assets/Rectangle 108.png';
 import reca from '../../assets/Rectangle 2 (6).png';
 import master from '../../assets/master.png';
-import Карточка from '../../assets/Карточка.png'
+import Карточка from '../../assets/Карточка.png';
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
+
+  // Inputlar uchun statelar
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
 
   // Kurs ma'lumotlari strukturasi
   const coursesData = [
@@ -65,6 +69,13 @@ export default function Main({ t }) {
       price: t.free || "Бесплатно"
     }
   ];
+
+  // Formani yuborish funksiyasi
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Yuborilgan ma'lumotlar:", { name, phone });
+    // Bu yerda Telegram bot yoki API kodingiz bo'ladi
+  };
 
   return (
     <main className="main-content-wrapper">
@@ -163,12 +174,11 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 3. OBUCHENIE KOSMETOLOGOV (Rasm xatoligi to'g'rilandi) ================= */}
+      {/* ================= 3. OBUCHENIE KOSMETOLOGOV ================= */}
       <section className="edu-categories-section">
         <h2 className="section-main-title">{t.sectionEducation || "Обучение косметологов"}</h2>
         <div className="cats-grid-layout">
           
-          {/* casmetika rasmi shu yerda to'g'ri chiqarildi */}
           <div className="cat-card grid-large" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${casmetika})` }}>
             <div className="cat-card-inner">
               <h3 className="cat-card-title-text">{t.catCourses || "КУРСЫ КОСМЕТОЛОГИИ"}</h3>
@@ -177,13 +187,12 @@ export default function Main({ t }) {
             </div>
           </div>
 
-          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
             <div className="cat-card-inner center-content">
               <h3 className="cat-card-title-text">{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
             </div>
           </div>
 
-          {/* Bu yerga ham casmetika rasmi to'g'ri ulandi */}
           <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${master})` }}>
             <div className="cat-card-inner bottom-align">
               <h3 className="cat-card-title-text">{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
@@ -196,7 +205,7 @@ export default function Main({ t }) {
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
             <div className="cat-card-inner bottom-align">
               <h3 className="cat-card-title-text">{t.catPromo || "АКЦИИ"}</h3>
             </div>
@@ -274,6 +283,118 @@ export default function Main({ t }) {
               onClick={() => setActiveDot(index)}
             ></span>
           ))}
+        </div>
+      </section>
+
+      {/* ================= 6. WHY US (NEGA BIZ) SEKSIYASI ================= */}
+      <section className="why-us-section">
+        <h2 className="section-main-title">{t.whyUsTitle || "Почему мы"}</h2>
+        <div className="why-us-grid">
+          <div className="why-card">
+            <div className="why-card-content">
+              <h3 className="why-card-title">{t.currentLang === 'UZ' ? "O'qituvchilar" : "Преподаватели"}</h3>
+              <p className="why-card-desc">
+                {t.currentLang === 'UZ' 
+                  ? "Bizning o'qituvchilarimiz kosmetologiya sohasida ko'p yillik tajribaga ega va amaliyot bilan birga olib boradilar." 
+                  : "Наши преподаватели имеют многолетний опыт в сфере косметологии и совмещают преподавательскую деятельность с практической работой в салонах красоты."}
+              </p>
+            </div>
+            <span className="why-card-number">01</span>
+          </div>
+
+          <div className="why-card card-bg-green">
+            <div className="why-card-content">
+              <h3 className="why-card-title">{t.currentLang === 'UZ' ? "Sertifikatlar" : "Сертификаты"}</h3>
+              <p className="why-card-desc">
+                {t.currentLang === 'UZ' 
+                  ? "Kurs yakunida beriladigan sertifikatlar ishga qabul qilishda eng yaxshi tavsiyanoma bo'lib xizmat qiladi." 
+                  : "Удостоверение, сертификат и свидетельство полученные у нас, работают как лучшая \"рекомендация\" при приеме на работу."}
+              </p>
+            </div>
+            <span className="why-card-number">02</span>
+          </div>
+
+          <div className="why-card">
+            <div className="why-card-content">
+              <h3 className="why-card-title">{t.currentLang === 'UZ' ? "Malaka oshirish" : "Повышение квалификации"}</h3>
+              <p className="why-card-desc">
+                {t.currentLang === 'UZ' 
+                  ? "Har yili 2000 dan ortiq kosmetologlar markazimizning keng xonalarida o'z malakalarini oshiradilar." 
+                  : "Ежегодно, больше 2000 косметологов повышают квалификацию и уровень профессионализма в просторных кабинетах."}
+              </p>
+            </div>
+            <span className="why-card-number">03</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 7. SPECIAL OFFERS (AKSIYALAR) SLIDERI ================= */}
+      <section className="special-offers-section">
+        <h2 className="section-main-title">{t.specialOffersTitle || "Специальные предложения"}</h2>
+        
+        <div className="slider-container">
+          <button className="slider-arrow arrow-left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 19l-7-7 7-7" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+
+          <div className="offers-grid">
+            <div className="offer-promo-card">
+              <img src={casmetika} alt="Promo 1" className="promo-banner-img" />
+            </div>
+            <div className="offer-promo-card">
+              <img src={cas} alt="Promo 2" className="promo-banner-img" />
+            </div>
+            <div className="offer-promo-card">
+              <img src={master} alt="Promo 3" className="promo-banner-img" />
+            </div>
+          </div>
+
+          <button className="slider-arrow arrow-right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#6b7280" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div className="slider-dots">
+          {[0, 1, 2, 3, 4].map((index) => (
+            <span 
+              key={index} 
+              className={`dot ${index === 1 ? 'active' : ''}`}
+            ></span>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= 8. CALLBACK FORM (ALOQA FORMASI) ================= */}
+      <section className="callback-form-section">
+        <div className="callback-card-wrapper">
+          <h2 className="callback-title">{t.callbackTitle || "Закажите обратный звонок"}</h2>
+          <p className="callback-subtitle">{t.callbackSubtitle || "Оставьте заявку в форме и наш менеджер свяжется с вами"}</p>
+          
+          <form className="callback-html-form" onSubmit={handleSubmit}>
+            <div className="input-field-group">
+              <input 
+                type="text" 
+                placeholder={t.placeholderName || "Ваше имя"} 
+                className="callback-text-input" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-field-group">
+              <input 
+                type="tel" 
+                placeholder={t.placeholderPhone || "Ваш номер телефона"} 
+                className="callback-text-input" 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="callback-submit-btn">
+              {t.btnSend || "Отправить"}
+            </button>
+          </form>
         </div>
       </section>
 

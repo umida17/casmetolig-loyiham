@@ -12,8 +12,7 @@
   font-weight: 700;
   color: #1f2937;
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 180px;
+  margin-top: 220px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -27,6 +26,7 @@
 .courses-section {
   text-align: center;
   position: relative;
+  margin-top: 250px;
   margin-bottom: 120px;
 }
 
@@ -275,9 +275,7 @@
 }
 .about-arrow-link:hover .long-arrow-line { width: 80px; }
 
-/* ================= YANGI SECTIONLAR TARTIBI BO'YICHA ================= */
-
-/* 1. Obychenie Kosmetologov Plitka qismi */
+/* ================= 3. OBUCHENIE KOSMETOLOGOV STILI ================= */
 .edu-categories-section {
   margin-top: 140px;
   margin-bottom: 100px;
@@ -350,9 +348,10 @@
 .bottom-align { justify-content: flex-end; }
 .top-align { justify-content: flex-start; }
 
-/* 2. Model recruitment banneri */
+/* ================= 4. MODEL RECRUITMENT STILI ================= */
 .model-recruitment-section {
   margin-bottom: 120px;
+  margin-top: 150px;
 }
 
 .model-flex-container {
@@ -414,7 +413,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
 }
 
-/* 3. Master-klass narxlari paneli */
+/* ================= 5. MASTER-KLASS NARXLARI STILI ================= */
 .masterclasses-prices-section {
   margin-bottom: 120px;
 }
@@ -423,7 +422,6 @@
   font-size: 16px;
   color: #6b7280;
   text-align: center;
-  margin-top: -35px;
 }
 
 .master-cards-flex-row {
@@ -528,13 +526,199 @@
   background-color: #4d7c0f;
 }
 
+/* ================= 6. WHY US (NEGA BIZ) STILI ================= */
+.why-us-section {
+  margin-top: 140px;
+  margin-bottom: 100px;
+}
+
+.why-us-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.03);
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  text-align: left;
+}
+
+.why-card.card-bg-green {
+  background-color: #bbf7d0; 
+  border: none;
+}
+
+.why-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.why-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 15px 0;
+}
+
+.why-card-desc {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.why-card-number {
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  font-size: 110px;
+  font-weight: 800;
+  color: rgba(229, 231, 235, 0.5);
+  line-height: 1;
+  z-index: 1;
+  user-select: none;
+}
+
+.card-bg-green .why-card-number {
+  color: rgba(134, 239, 172, 0.4);
+}
+
+/* ================= 7. SPECIAL OFFERS STILI ================= */
+.special-offers-section {
+  margin-top: 140px;
+  margin-bottom: 120px;
+}
+
+.offers-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.offer-promo-card {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.promo-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.offer-promo-card:hover .promo-banner-img {
+  transform: scale(1.02);
+}
+
+/* ================= 8. CALLBACK FORM STILI ================= */
+.callback-form-section {
+  margin-top: 140px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.callback-card-wrapper {
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  padding: 60px 40px;
+  border-radius: 6px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.callback-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #65a30d;
+  margin: 0 0 12px 0;
+}
+
+.callback-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 35px 0;
+}
+
+.callback-html-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.callback-text-input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #1f2937;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.callback-text-input:focus {
+  border-color: #65a30d;
+}
+
+.callback-text-input::placeholder {
+  color: #9ca3af;
+}
+
+.callback-submit-btn {
+  background-color: #65a30d;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.callback-submit-btn:hover {
+  background-color: #4d7c0f;
+}
+
 /* --- RESPONSIVE MOBILE VARIANT --- */
 @media (max-width: 992px) {
-  .courses-grid, .about-flex-layout, .cats-grid-layout, .model-flex-container, .master-cards-flex-row { 
+  .courses-grid, 
+  .about-flex-layout, 
+  .cats-grid-layout, 
+  .model-flex-container, 
+  .master-cards-flex-row,
+  .why-us-grid, 
+  .offers-grid { 
     flex-direction: column; 
     gap: 30px; 
   }
   .grid-large { grid-column: span 1; }
   .about-flex-layout, .about-info-block { text-align: center; }
   .about-arrow-link { justify-content: center; }
+  .why-card { min-height: 200px; }
 }
