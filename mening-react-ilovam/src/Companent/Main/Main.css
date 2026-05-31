@@ -3,10 +3,9 @@
   max-width: 1200px;
   margin: 80px auto;
   padding: 0 20px;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* ================= KURSLAR STILI (SIZNING KOD) ================= */
+/* ================= KURSLAR STILI ================= */
 .courses-section {
   text-align: center;
   position: relative;
@@ -18,8 +17,7 @@
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 50px;
-  margin-top: 100px; /* Masofani uyg'unlashtirish uchun */
-  text-align: center;
+  margin-top: 180px;
 }
 
 .slider-container {
@@ -184,7 +182,6 @@
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.2s;
-  z-index: 10;
 }
 .slider-arrow:hover { background: #f9fafb; transform: scale(1.05); }
 
@@ -207,188 +204,7 @@
   border-radius: 4px;
 }
 
-/* ================= YANGI BLOK: PLITKA KATEGORIYALAR (IMAGE_B17E80.JPG) ================= */
-.edu-categories-section {
-  margin-bottom: 120px;
-}
-
-.cats-grid-layout {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.cat-card {
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  height: 200px;
-  position: relative;
-  color: white;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.cat-card:hover { transform: translateY(-4px); }
-.grid-large { grid-column: span 2; }
-
-.cat-card-inner {
-  position: absolute;
-  inset: 0;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.cat-card-inner h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-.pre-line-text {
-  white-space: pre-line;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.95;
-}
-
-.arrow-indicator { align-self: flex-end; font-size: 20px; }
-.center-content { justify-content: center; align-items: center; text-align: center; }
-.bottom-align { justify-content: flex-end; }
-.top-align { justify-content: flex-start; }
-
-/* ================= YANGI BLOK: MODEL YIG'ISH BANNERI ================= */
-.model-recruitment-section {
-  margin-bottom: 120px;
-}
-
-.model-flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-.model-text-side { flex: 1.2; text-align: left; }
-
-.model-main-title {
-  font-size: 34px;
-  font-weight: 700;
-  color: #65a30d; /* Rasm dagi aniq yashil shrift */
-  margin-bottom: 25px;
-  letter-spacing: -0.5px;
-}
-
-.model-p-lead { font-size: 17px; font-weight: 600; color: #374151; margin-bottom: 15px; }
-.model-p-sub { font-size: 15px; color: #4b5563; line-height: 1.6; margin-bottom: 35px; }
-
-.btn-green-action {
-  background-color: #65a30d;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.btn-green-action:hover { background-color: #4d7c0f; }
-
-.model-image-side { flex: 0.8; }
-.model-side-img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-
-/* ================= YANGI BLOK: MASTER-KLASS NARX KARTALARI ================= */
-.masterclasses-prices-section {
-  margin-bottom: 120px;
-}
-
-.master-section-subtitle {
-  font-size: 16px;
-  color: #6b7280;
-  text-align: center;
-  margin-top: -35px;
-}
-
-.master-cards-flex-row {
-  display: flex;
-  gap: 30px;
-  width: 100%;
-}
-
-.master-horizontal-card {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.02);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.master-card-img-box img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-}
-
-.master-card-content-box {
-  display: flex;
-  flex: 1;
-  min-height: 170px;
-}
-
-.master-info-left-pane {
-  flex: 1.4;
-  padding: 25px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.master-card-date-str { font-size: 12px; color: #9ca3af; font-weight: 600; }
-.master-card-inner-title { font-size: 15px; font-weight: 700; color: #1f2937; margin: 10px 0; line-height: 1.45; }
-.master-card-author-text { font-size: 13px; color: #6b7280; margin: 0; }
-.mini-arrow-click { font-size: 16px; color: #1f2937; margin-top: 10px; }
-
-.master-info-right-pane {
-  flex: 0.6;
-  display: flex;
-  flex-direction: column;
-}
-
-.master-price-badge-zone {
-  background-color: #f0fdf4; /* Och yashil panel (Rasmga 100% mos) */
-  color: #1f2937;
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  text-align: center;
-  flex: 1;
-  border-left: 1px solid #f0fdf4;
-}
-
-.master-green-square-btn {
-  background-color: #65a30d;
-  color: white;
-  border: none;
-  height: 54px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.master-green-square-btn:hover { background-color: #4d7c0f; }
-
-/* ================= BIZ HAQIMIZDA (ABOUT) STILI (SIZNING KOD) ================= */
+/* ================= BIZ HAQIMIZDA (ABOUT) STILI ================= */
 .about-section-container {
   margin-top: 140px;
   padding: 40px 0;
@@ -401,10 +217,30 @@
   gap: 60px;
 }
 
-.about-media-block { flex: 1; }
-.about-main-photo { width: 100%; max-width: 460px; height: auto; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-.about-info-block { flex: 1.2; max-width: 580px; text-align: left; }
-.about-mini-tag { font-size: 14px; color: #9ca3af; display: block; margin-bottom: 10px; }
+.about-media-block {
+  flex: 1;
+}
+
+.about-main-photo {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.about-info-block {
+  flex: 1.2;
+  max-width: 580px;
+  text-align: left;
+}
+
+.about-mini-tag {
+  font-size: 14px;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 10px;
+}
 
 .about-branding-title {
   font-size: 28px;
@@ -414,8 +250,17 @@
   margin-bottom: 30px;
 }
 
-.brand-green { color: #65a30d; }
-.about-paragraphs { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+.brand-green {
+  color: #65a30d;
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
 .p-highlight { font-size: 16px; color: #4b5563; }
 .p-bold { font-size: 16px; font-weight: 600; color: #1f2937; }
 .p-normal { font-size: 15px; color: #6b7280; line-height: 1.6; }
@@ -451,14 +296,59 @@
   transform: rotate(45deg);
 }
 
-.about-arrow-link:hover .long-arrow-line { width: 80px; }
+.about-arrow-link:hover .long-arrow-line {
+  width: 80px;
+}
+
+/* ================= ➔ ENDI SHU YERDAN RASMDAGI YANGI SECTIONLAR JOYLASHADI ================= */
+
+/* 1. Plitka bo'limi */
+.edu-categories-section { margin-top: 140px; margin-bottom: 100px; }
+.cats-grid-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.cat-card { background-size: cover; background-position: center; border-radius: 6px; height: 200px; position: relative; color: white; cursor: pointer; transition: transform 0.3s; }
+.cat-card:hover { transform: translateY(-4px); }
+.grid-large { grid-column: span 2; }
+.cat-card-inner { position: absolute; inset: 0; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
+.cat-card-inner h3 { font-size: 22px; font-weight: 700; margin: 0; }
+.pre-line-text { white-space: pre-line; font-size: 14px; opacity: 0.95; line-height: 1.6; }
+.arrow-indicator { align-self: flex-end; font-size: 20px; }
+.center-content { justify-content: center; align-items: center; text-align: center; }
+.bottom-align { justify-content: flex-end; }
+.top-align { justify-content: flex-start; }
+
+/* 2. Model recruitment banneri */
+.model-recruitment-section { margin-bottom: 120px; }
+.model-flex-container { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.model-text-side { flex: 1.2; text-align: left; }
+.model-main-title { font-size: 34px; font-weight: 700; color: #65a30d; margin-bottom: 25px; }
+.model-p-lead { font-size: 17px; font-weight: 600; color: #374151; margin-bottom: 15px; }
+.model-p-sub { font-size: 15px; color: #4b5563; line-height: 1.6; margin-bottom: 35px; }
+.btn-green-action { background-color: #65a30d; color: white; border: none; padding: 15px 40px; font-size: 15px; font-weight: 700; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+.btn-green-action:hover { background-color: #4d7c0f; }
+.model-image-side { flex: 0.8; }
+.model-side-img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+
+/* 3. Master-klass narxlari paneli */
+.masterclasses-prices-section { margin-bottom: 120px; }
+.master-section-subtitle { font-size: 16px; color: #6b7280; text-align: center; margin-top: -35px; }
+.master-cards-flex-row { display: flex; gap: 30px; width: 100%; }
+.master-horizontal-card { background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 8px 25px rgba(0,0,0,0.02); flex: 1; display: flex; flex-direction: column; }
+.master-card-img-box img { width: 100%; height: 190px; object-fit: cover; }
+.master-card-content-box { display: flex; flex: 1; min-height: 170px; }
+.master-info-left-pane { flex: 1.4; padding: 25px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; }
+.master-card-date-str { font-size: 12px; color: #9ca3af; font-weight: 600; }
+.master-card-inner-title { font-size: 15px; font-weight: 700; color: #1f2937; margin: 10px 0; line-height: 1.45; }
+.master-card-author-text { font-size: 13px; color: #6b7280; margin: 0; }
+.mini-arrow-click { font-size: 16px; color: #1f2937; }
+.master-info-right-pane { flex: 0.6; display: flex; flex-direction: column; }
+.master-price-badge-zone { background-color: #f0fdf4; color: #1f2937; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; padding: 15px; text-align: center; flex: 1; }
+.master-green-square-btn { background-color: #65a30d; color: white; border: none; height: 54px; font-size: 22px; cursor: pointer; transition: background 0.2s; }
+.master-green-square-btn:hover { background-color: #4d7c0f; }
 
 /* --- RESPONSIVE MOBILE VARIANT --- */
 @media (max-width: 992px) {
-  .cats-grid-layout { grid-template-columns: 1fr; }
+  .courses-grid, .about-flex-layout, .cats-grid-layout, .model-flex-container, .master-cards-flex-row { flex-direction: column; gap: 30px; }
   .grid-large { grid-column: span 1; }
-  .courses-grid, .model-flex-container, .master-cards-flex-row, .about-flex-layout { flex-direction: column; gap: 30px; }
-  .about-flex-layout { text-align: center; gap: 40px; }
-  .about-info-block { text-align: center; margin: 0 auto; }
+  .about-flex-layout, .about-info-block { text-align: center; }
   .about-arrow-link { justify-content: center; }
 }

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Main.css';
 
-// Sizning loyihadagi rasmlar importi 
+// Loyihadagi rasmlar importi
 import aboutImage from '../../assets/Rectangle 111.png';
 import hom from '../../assets/image (27).png';
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
 
-  // Kurslar ma'lumotlar strukturasi (Siz yuborgan kod asosida)
+  // Siz tashlagan 3 xil kurs ma'lumotlari strukturasi
   const coursesData = [
     {
       id: 1,
@@ -39,7 +39,7 @@ export default function Main({ t }) {
     }
   ];
 
-  // image_b17e80.jpg rasmning eng pastidagi Master-klasslar slayderi ma'lumotlari
+  // image_b17e80.jpg rasmdagi master-klasslar ro'yxati
   const masterClassesData = [
     {
       id: 1,
@@ -49,7 +49,7 @@ export default function Main({ t }) {
         : "10 возможностей неодимового лазера. Лазерный пилинг, удаление тату/татуажа",
       instructor: (t.trainer || "Тренер") + ": Юлия Щукина",
       price: "2000 грн",
-      img: "https://via.placeholder.com/350x180" // Loyihangizdagi mos rasm qo'yilishi mumkin
+      img: "https://via.placeholder.com/350x180"
     },
     {
       id: 2,
@@ -59,79 +59,14 @@ export default function Main({ t }) {
         : "Профессия косметолог. Семинар для новичков и профессионалов",
       instructor: (t.speakers || "Спикеры") + ": Марина Спивак, Алина Ядчишина, Елена Белогурова, Юлия Щукина",
       price: t.free || "Бесплатно",
-      img: "https://via.placeholder.com/350x180" // Loyihangizdagi mos rasm qo'yilishi mumkin
+      img: "https://via.placeholder.com/350x180"
     }
   ];
 
   return (
     <main className="main-content-wrapper">
       
-      {/* ================= 1. OBUCHENIE KOSMETOLOGOV (YANGI BLOK) ================= */}
-      <section className="edu-categories-section">
-        <h2 className="section-main-title" style={{ marginTop: '0px' }}>{t.sectionEducation || "Обучение косметологов"}</h2>
-        <div className="cats-grid-layout">
-          
-          {/* Katta plitka kartasi */}
-          <div className="cat-card grid-large" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://via.placeholder.com/600x250')` }}>
-            <div className="cat-card-inner">
-              <h3>{t.catCourses || "КУРСЫ КОСМЕТОЛОГИИ"}</h3>
-              <p className="pre-line-text">{t.catCoursesSub || "- эстетическая косметология\n- инъекционная косметология\n- лазерная косметология"}</p>
-              <span className="arrow-indicator">➔</span>
-            </div>
-          </div>
-
-          {/* Onlayn ta'lim */}
-          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
-            <div className="cat-card-inner center-content">
-              <h3>{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
-            </div>
-          </div>
-
-          {/* Master Klasslar */}
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
-            <div className="cat-card-inner bottom-align">
-              <h3>{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
-            </div>
-          </div>
-
-          {/* Raspisanie */}
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
-            <div className="cat-card-inner top-align">
-              <h3>{t.catSchedule || "РАСПИСАНИЕ"}</h3>
-            </div>
-          </div>
-
-          {/* Akcii */}
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
-            <div className="cat-card-inner bottom-align">
-              <h3>{t.catPromo || "АКЦИИ"}</h3>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 2. VEDEM NABOR MODELEY (YANGI BANNER) ================= */}
-      <section className="model-recruitment-section">
-        <div className="model-flex-container">
-          
-          <div className="model-text-side">
-            <h2 className="model-main-title">{t.modelTitle || "ВЕДЕМ НАБОР МОДЕЛЕЙ"}</h2>
-            <p className="model-p-lead">{t.modelDesc1 || "Мы предлагаем свои услуги для моделей."}</p>
-            <p className="model-p-sub">
-              {t.modelDesc2 || "Выберите процедуру или несколько процедур и наш менеджер проконсультирует вас и назовет ближайшую дату, когда вы сможете получить эту процедуру."}
-            </p>
-            <button className="btn-green-action">{t.btnBecomeModel || "Стать моделью"}</button>
-          </div>
-
-          <div className="model-image-side">
-            <img src="https://via.placeholder.com/450x320" alt="Model Recruitment Process" className="model-side-img" />
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 3. SIZNING ESKI KURSLAR SEKSIYANGIZ ================= */}
+      {/* ================= 1. KURSLAR SEKSIYASI (Siz tashlagan shaklda birinchi) ================= */}
       <section className="courses-section">
         <h2 className="section-main-title">{t.coursesTitle}</h2>
         
@@ -191,7 +126,101 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 4. MASTER-KLASSLAR SLAYDERI (YANGI PASTKI QISM) ================= */}
+      {/* ================= 2. BIZ HAQIMIZDA SEKSIYASI (Siz tashlagan shaklda ikkinchi) ================= */}
+      <section className="about-section-container">
+        <div className="about-flex-layout">
+          
+          <div className="about-media-block">
+            <img 
+              src={aboutImage}
+              alt="ValMari Center Live Process" 
+              className="about-main-photo"
+            />
+          </div>
+
+          <div className="about-info-block">
+            <span className="about-mini-tag">{t.aboutTitle}</span>
+            <h2 className="about-branding-title">
+              <span className="brand-green">VALMARI</span> <br />
+              {t.currentLang === 'UZ' ? "ESTETIK KOSMETOLOGIYA YETAKCHI O'QUV MARKAZI" : "ВЕДУЩИЙ УЧЕБНЫЙ СЕНТР ЭСТЕТИЧЕСКОЙ КОСМЕТОЛОГИИ"}
+            </h2>
+            
+            <div className="about-paragraphs">
+              <p className="p-highlight">{t.aboutDesc1}</p>
+              <p className="p-bold">{t.aboutDesc2}</p>
+              <p className="p-normal">{t.aboutDesc3}</p>
+            </div>
+
+            <a href="#more-about" className="about-arrow-link">
+              <span>{t.btnMore}</span>
+              <span className="long-arrow-line"></span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= 3. YANGI BO'LIM: OBUCHENIE KOSMETOLOGOV (image_b17e80.jpg dan 1-blok) ================= */}
+      <section className="edu-categories-section">
+        <h2 className="section-main-title">{t.sectionEducation || "Обучение косметологов"}</h2>
+        <div className="cats-grid-layout">
+          
+          <div className="cat-card grid-large" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://via.placeholder.com/600x250')` }}>
+            <div className="cat-card-inner">
+              <h3>{t.catCourses || "КУРСЫ КОСМЕТОЛОГИИ"}</h3>
+              <p className="pre-line-text">{t.catCoursesSub || "- эстетическая косметология\n- инъекционная косметология\n- лазерная косметология"}</p>
+              <span className="arrow-indicator">➔</span>
+            </div>
+          </div>
+
+          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+            <div className="cat-card-inner center-content">
+              <h3>{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
+            </div>
+          </div>
+
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+            <div className="cat-card-inner bottom-align">
+              <h3>{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
+            </div>
+          </div>
+
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+            <div className="cat-card-inner top-align">
+              <h3>{t.catSchedule || "РАСПИСАНИЕ"}</h3>
+            </div>
+          </div>
+
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+            <div className="cat-card-inner bottom-align">
+              <h3>{t.catPromo || "АКЦИИ"}</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= 4. YANGI BO'LIM: VEDEM NABOR MODELEY (image_b17e80.jpg dan 2-blok) ================= */}
+      <section className="model-recruitment-section">
+        <div className="model-flex-container">
+          
+          <div className="model-text-side">
+            <h2 className="model-main-title">{t.modelTitle || "ВЕДЕМ НАБОР МОДЕЛЕЙ"}</h2>
+            <p className="model-p-lead">{t.modelDesc1 || "Мы предлагаем свои услуги для моделей."}</p>
+            <p className="model-p-sub">
+              {t.modelDesc2 || "Выберите процедуру или несколько процедур и наш менеджер проконсультирует вас и назовет ближайшую дату, когда вы сможете получить эту процедуру."}
+            </p>
+            <button className="btn-green-action">{t.btnBecomeModel || "Стать моделью"}</button>
+          </div>
+
+          <div className="model-image-side">
+            <img src="https://via.placeholder.com/450x320" alt="Model Recruitment" className="model-side-img" />
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= 5. YANGI BO'LIM: MASTER-KLASSLAR NARX KARTALARI (image_b17e80.jpg dan 3-blok) ================= */}
       <section className="masterclasses-prices-section">
         <h2 className="section-main-title" style={{ marginBottom: '10px' }}>{t.masterClassesTitle || "Мастер-классы"}</h2>
         <p className="master-section-subtitle">{t.masterClassesSub || "Мероприятия для повышения квалификации косметологов"}</p>
@@ -205,14 +234,11 @@ export default function Main({ t }) {
             {masterClassesData.map((item) => (
               <div className="master-horizontal-card" key={item.id}>
                 
-                {/* Rasm joylashishi */}
                 <div className="master-card-img-box">
                   <img src={item.img} alt={item.title} />
                 </div>
                 
-                {/* O'ng tomon ma'lumotlar paneli */}
                 <div className="master-card-content-box">
-                  
                   <div className="master-info-left-pane">
                     <span className="master-card-date-str">{item.date}</span>
                     <h4 className="master-card-inner-title">{item.title}</h4>
@@ -224,7 +250,6 @@ export default function Main({ t }) {
                     <div className="master-price-badge-zone">{item.price}</div>
                     <button className="master-green-square-btn">→</button>
                   </div>
-
                 </div>
 
               </div>
@@ -244,40 +269,6 @@ export default function Main({ t }) {
               onClick={() => setActiveDot(index)}
             ></span>
           ))}
-        </div>
-      </section>
-
-      {/* ================= 5. SIZNING ESKI BIZ HAQIMIZDA SEKSIYANGIZ ================= */}
-      <section className="about-section-container">
-        <div className="about-flex-layout">
-          
-          <div className="about-media-block">
-            <img 
-              src={aboutImage}
-              alt="ValMari Center Live Process" 
-              className="about-main-photo"
-            />
-          </div>
-
-          <div className="about-info-block">
-            <span className="about-mini-tag">{t.aboutTitle}</span>
-            <h2 className="about-branding-title">
-              <span className="brand-green">VALMARI</span> <br />
-              {t.currentLang === 'UZ' ? "ESTETIK KOSMETOLOGIYA YETAKCHI O'QUV MARKAZI" : "ВЕДУЩИЙ УЧЕБНЫЙ ЦЕНТР ЭСТЕТИЧЕСКОЙ КОСМЕТОЛОГИИ"}
-            </h2>
-            
-            <div className="about-paragraphs">
-              <p className="p-highlight">{t.aboutDesc1}</p>
-              <p className="p-bold">{t.aboutDesc2}</p>
-              <p className="p-normal">{t.aboutDesc3}</p>
-            </div>
-
-            <a href="#more-about" className="about-arrow-link">
-              <span>{t.btnMore}</span>
-              <span className="long-arrow-line"></span>
-            </a>
-          </div>
-
         </div>
       </section>
 
