@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import xarita from
+
 
 export default function Footer({ t }) {
   // Figma dizayndagi havolalar (agar i18n tarjimalari bo'lsa t.bilan ishlating)
@@ -25,7 +27,7 @@ export default function Footer({ t }) {
         {/* LEFT SIDE: Google Map */}
         <div className="footer-map-wrapper">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.8821034375427!2d36.21666497693529!3d50.01353111818296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a13beff8383f%3A0x633cf45d4a469fb5!2z0YPQuy4g0JrQu9C-0YfQutC-0LLRgdC60DRRjSwgMywg0KXQsNGA0YzQutC_0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRY9GCLC_Qo9C60YDQ0LjQvdCwLCA2MTAwMA!5e0!3m2!2sru!2s!4v1717160000000!5m2!2sru!2s"
+            src={}
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 

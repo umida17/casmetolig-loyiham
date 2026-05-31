@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 // Komponentlarni import qilamiz
 import Header from './Companent/Header/Header'; 
 import Hero from './Companent/Hero/Hero'; 
-// Yangi Main komponentini loyihaga qo'shamiz 🚀
 import Main from './Companent/Main/Main'; 
+// Yangi Footer komponentini loyihaga qo'shamiz 🚀
+import Footer from './Companent/Footer/Footer'; 
 
-// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + Hero + Main)
+// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + Hero + Main + Footer)
 const translations = {
   RU: {
     // Header qismi
@@ -18,7 +19,7 @@ const translations = {
     schedule: "Расписание",
     promo: "Акции",
     shop: "Магазин",
-    title: "Учебный центр",
+    title: "Учебный中心",
     subtitle: "эстетической косметологии",
     welcome: "Добро пожаловать в ValMari!",
 
@@ -46,7 +47,7 @@ const translations = {
     statClientTitle: "Довольных",
     statClientSub: "клиентов",
 
-    // ================= NEW: Main (Курсы обучения) qismi =================
+    // ================= Main (Курсы обучения) qismi =================
     coursesTitle: "Курсы обучения",
     forMedics: "Курс для медиков",
     offline: "Оффлайн",
@@ -54,12 +55,16 @@ const translations = {
     masterClass: "Мастер-класс",
     freeSeats: "Свободно {seats} из 15 мест",
 
-    // ================= NEW: Main (О нас) qismi =================
+    // ================= Main (О нас) qismi =================
     aboutTitle: "О нас",
     aboutBrandTitle: "ВЕДУЩИЙ УЧЕБНЫЙ ЦЕНТР ЭСТЕТИЧЕСКОЙ КОСМЕТОЛОГИИ",
     aboutDesc1: "Описание может быть любое.",
     aboutDesc2: "Ведущий учебный центр эстетической косметологии.",
-    aboutDesc3: "Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости."
+    aboutDesc3: "Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости.",
+
+    // ================= NEW: Footer qismi =================
+    addressText: "Харьков, Клочковская, д. 3",
+    privacyPolicy: "Политика конфиденциальности"
   },
   UZ: {
     // Header qismi
@@ -100,7 +105,7 @@ const translations = {
     statClientTitle: "Mamnun",
     statClientSub: "mijozlarimiz",
 
-    // ================= NEW: Main (O'quv kurslari) qismi =================
+    // ================= Main (O'quv kurslari) qismi =================
     coursesTitle: "O'quv kurslari",
     forMedics: "Shifokorlar uchun kurs",
     offline: "Offlayn",
@@ -108,12 +113,16 @@ const translations = {
     masterClass: "Master-klass",
     freeSeats: "15 ta joydan {seats} tasi bo'sh",
 
-    // ================= NEW: Main (Biz haqimizda) qismi =================
+    // ================= Main (Biz haqimizda) qismi =================
     aboutTitle: "Biz haqimizda",
     aboutBrandTitle: "ESTETIK KOSMETOLOGIYA BO'YICHA YETAKCHI O'QUV MARKAZI",
     aboutDesc1: "Tavsif ixtiyoriy bo'lishi mumkin.",
     aboutDesc2: "Estetik kosmetologiya bo'yicha yetakchi o'quv markazi.",
-    aboutDesc3: "5 yildan ortiq vaqt davomida biz kosmetologiya, go'zallik, salomatlik va yoshlik industriyasi sohasida sertifikatlangan professional ta'lim kurslarini o'tkazib kelmoqdamiz."
+    aboutDesc3: "5 yildan ortiq vaqt davomida biz kosmetologiya, go'zallik, salomatlik va yoshlik industriyasi sohasida sertifikatlangan professional ta'lim kurslarini o'tkav kelmoqdamiz.",
+
+    // ================= NEW: Footer qismi =================
+    addressText: "Xarkov, Klochkovskaya ko'chasi, 3-uy",
+    privacyPolicy: "Maxfiylik siyosati"
   },
   EN: {
     // Header qismi
@@ -154,7 +163,7 @@ const translations = {
     statClientTitle: "Satisfied",
     statClientSub: "clients",
 
-    // ================= NEW: Main (Training Courses) qismi =================
+    // ================= Main (Training Courses) qismi =================
     coursesTitle: "Training Courses",
     forMedics: "Course for Medics",
     offline: "Offline",
@@ -162,20 +171,21 @@ const translations = {
     masterClass: "Master-class",
     freeSeats: "{seats} of 15 seats available",
 
-    // ================= NEW: Main (About Us) qismi =================
+    // ================= Main (About Us) qismi =================
     aboutTitle: "About Us",
     aboutBrandTitle: "LEADING TRAINING CENTER OF AESTHETIC COSMETOLOGY",
     aboutDesc1: "Description can be anything.",
     aboutDesc2: "Leading training center of aesthetic cosmetology.",
-    aboutDesc3: "For more than 5 years we have been conducting certified professional education courses in the field of cosmetology and the industry of beauty, health and youth."
+    aboutDesc3: "For more than 5 years we have been conducting certified professional education courses in the field of cosmetology and the industry of beauty, health and youth.",
+
+    // ================= NEW: Footer qismi =================
+    addressText: "Kharkiv, Klochkivska St, 3",
+    privacyPolicy: "Privacy Policy"
   }
 };
 
 export default function App() {
-  // Standart holatda rus tili tanlangan bo'ladi
   const [currentLang, setCurrentLang] = useState('RU');
-
-  // Tanlangan tilga mos tarjimalarni olamiz
   const t = translations[currentLang];
 
   return (
@@ -190,9 +200,11 @@ export default function App() {
       {/* Asosiy Banner (Hero) qismi */}
       <Hero t={t} />
 
-      {/* 🌟 YANGI QISM: Saytning o'rta qismi (Kurslar va Biz haqimizda) */}
-      {/* joriy til identifikatorini ham yuboramiz (Main ichida maxsus dinamik matnlar uchun kerak) */}
+      {/* Saytning o'rta qismi (Kurslar va Biz haqimizda) */}
       <Main t={{ ...t, currentLang: currentLang }} />
+
+      {/* 🌟 YANGI QISM: Footer (Xarita va Aloqa bloklari bilan) */}
+      <Footer t={t} />
     </div>
   );
 }
