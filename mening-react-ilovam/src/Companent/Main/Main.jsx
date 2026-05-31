@@ -4,6 +4,8 @@ import './Main.css';
 // Loyihadagi rasmlar importi
 import aboutImage from '../../assets/Rectangle 111.png';
 import hom from '../../assets/image (27).png';
+import casmetika from '../../assets/casmetika.png';
+import cas from '../../assets/Rectangle 108.png';
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
@@ -179,7 +181,7 @@ export default function Main({ t }) {
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('{casmetika}')` }}>
             <div className="cat-card-inner bottom-align">
               <h3>{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
             </div>
@@ -214,7 +216,7 @@ export default function Main({ t }) {
           </div>
 
           <div className="model-image-side">
-            <img src="https://via.placeholder.com/450x320" alt="Model Recruitment" className="model-side-img" />
+            <img src={} alt="Model Recruitment" className="model-side-img" />
           </div>
 
         </div>
