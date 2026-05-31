@@ -9,6 +9,10 @@ import cas from '../../assets/Rectangle 108.png';
 import reca from '../../assets/Rectangle 2 (6).png';
 import master from '../../assets/master.png';
 import Карточка from '../../assets/Карточка.png';
+import rect from '../../assets/Rectangle 294.png'
+import rectk from '../../assets/Rectangle 295.png'
+
+
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
@@ -339,13 +343,13 @@ export default function Main({ t }) {
 
           <div className="offers-grid">
             <div className="offer-promo-card">
-              <img src={casmetika} alt="Promo 1" className="promo-banner-img" />
+              <img src={rect} alt="Promo 1" className="promo-banner-img" />
             </div>
             <div className="offer-promo-card">
-              <img src={cas} alt="Promo 2" className="promo-banner-img" />
+              <img src={rectk} alt="Promo 2" className="promo-banner-img" />
             </div>
             <div className="offer-promo-card">
-              <img src={master} alt="Promo 3" className="promo-banner-img" />
+              <img src={rectk} alt="Promo 3" className="promo-banner-img" />
             </div>
           </div>
 
