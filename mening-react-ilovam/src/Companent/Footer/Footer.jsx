@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import xarita from
+import xarita from '../../assets/image 21.png';
 
 
 export default function Footer({ t }) {
@@ -25,18 +25,14 @@ export default function Footer({ t }) {
       <div className="footer-split-layout">
         
         {/* LEFT SIDE: Google Map */}
-        <div className="footer-map-wrapper">
-          <iframe 
-            src={}
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="ValMari Location Map"
-          ></iframe>
-        </div>
+        {/* LEFT SIDE: Shunchaki Xarita Rasmi */}
+    <div className="footer-map-wrapper">
+  <img 
+    src={xarita} 
+    alt="ValMari Location Map" 
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+  />
+  </div>
 
         {/* RIGHT SIDE: Dark Content Card */}
         <div className="footer-content-card">

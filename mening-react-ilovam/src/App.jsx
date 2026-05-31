@@ -19,7 +19,7 @@ const translations = {
     schedule: "Расписание",
     promo: "Акции",
     shop: "Магазин",
-    title: "Учебный中心",
+    title: "Учебный центр ",
     subtitle: "эстетической косметологии",
     welcome: "Добро пожаловать в ValMari!",
 

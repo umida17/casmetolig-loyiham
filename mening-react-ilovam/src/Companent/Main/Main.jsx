@@ -8,7 +8,7 @@ import casmetika from '../../assets/casmetika.png';
 import cas from '../../assets/Rectangle 108.png';
 import reca from '../../assets/Rectangle 2 (6).png';
 import master from '../../assets/master.png';
-import Карточка from '../../assets/Карточка.png';
+import kartochka from '../../assets/kartochka.png';
 import rect from '../../assets/Rectangle 294.png'
 import rectk from '../../assets/Rectangle 295.png'
 import recta from '../../assets/Rectangle 296.png'
@@ -192,7 +192,7 @@ export default function Main({ t }) {
             </div>
           </div>
 
-          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
+          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${kartochka})` }}>
             <div className="cat-card-inner center-content">
               <h3 className="cat-card-title-text">{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
             </div>
@@ -204,13 +204,13 @@ export default function Main({ t }) {
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${kartochka})` }}>
             <div className="cat-card-inner top-align">
               <h3 className="cat-card-title-text">{t.catSchedule || "РАСПИСАНИЕ"}</h3>
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${kartochka})` }}>
             <div className="cat-card-inner bottom-align">
               <h3 className="cat-card-title-text">{t.catPromo || "АКЦИИ"}</h3>
             </div>
