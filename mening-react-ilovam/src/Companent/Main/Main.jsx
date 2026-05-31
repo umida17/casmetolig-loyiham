@@ -8,6 +8,7 @@ import casmetika from '../../assets/casmetika.png';
 import cas from '../../assets/Rectangle 108.png';
 import reca from '../../assets/Rectangle 2 (6).png';
 import master from '../../assets/master.png';
+import Карточка from '../../assets/Карточка.png'
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
@@ -183,13 +184,13 @@ export default function Main({ t }) {
           </div>
 
           {/* Bu yerga ham casmetika rasmi to'g'ri ulandi */}
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${casmetika})` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${master})` }}>
             <div className="cat-card-inner bottom-align">
               <h3 className="cat-card-title-text">{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${master}')` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${Карточка})` }}>
             <div className="cat-card-inner top-align">
               <h3 className="cat-card-title-text">{t.catSchedule || "РАСПИСАНИЕ"}</h3>
             </div>
