@@ -6,11 +6,12 @@ import aboutImage from '../../assets/Rectangle 111.png';
 import hom from '../../assets/image (27).png';
 import casmetika from '../../assets/casmetika.png';
 import cas from '../../assets/Rectangle 108.png';
+import reca from '../../assets/Rectangle 2 (6).png';
 
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
 
-  // Siz tashlagan 3 xil kurs ma'lumotlari strukturasi
+  // Kurs ma'lumotlari strukturasi
   const coursesData = [
     {
       id: 1,
@@ -41,7 +42,7 @@ export default function Main({ t }) {
     }
   ];
 
-  // image_b17e80.jpg rasmdagi master-klasslar ro'yxati
+  // Master-klasslar ro'yxati
   const masterClassesData = [
     {
       id: 1,
@@ -50,25 +51,23 @@ export default function Main({ t }) {
         ? "Neodimiy lazerining 10 ta imkoniyati. Lazerli piling, tatuirovkani o'chirish" 
         : "10 возможностей неодимового лазера. Лазерный пилинг, удаление тату/татуажа",
       instructor: (t.trainer || "Тренер") + ": Юлия Щукина",
-      price: "2000 грн",
-      img: "https://via.placeholder.com/350x180"
+      price: "2000 грн"
     },
     {
       id: 2,
       date: "20 ноября, 12:00-17:00",
       title: t.currentLang === 'UZ'
-        ? "Kosmetolog kasbi. Yangi boshlovchilar va professionallar uchun seminar"
+        ? "Kosmetolog kasbi. Yangi boshловчилар ва профессионаллар учун семинар"
         : "Профессия косметолог. Семинар для новичков и профессионалов",
       instructor: (t.speakers || "Спикеры") + ": Марина Спивак, Алина Ядчишина, Елена Белогурова, Юлия Щукина",
-      price: t.free || "Бесплатно",
-      img: "https://via.placeholder.com/350x180"
+      price: t.free || "Бесплатно"
     }
   ];
 
   return (
     <main className="main-content-wrapper">
       
-      {/* ================= 1. KURSLAR SEKSIYASI (Siz tashlagan shaklda birinchi) ================= */}
+      {/* ================= 1. KURSLAR SEKSIYASI ================= */}
       <section className="courses-section">
         <h2 className="section-main-title">{t.coursesTitle}</h2>
         
@@ -128,7 +127,7 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 2. BIZ HAQIMIZDA SEKSIYASI (Siz tashlagan shaklda ikkinchi) ================= */}
+      {/* ================= 2. BIZ HAQIMIZDA SEKSIYASI ================= */}
       <section className="about-section-container">
         <div className="about-flex-layout">
           
@@ -162,47 +161,49 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 3. YANGI BO'LIM: OBUCHENIE KOSMETOLOGOV (image_b17e80.jpg dan 1-blok) ================= */}
+      {/* ================= 3. OBUCHENIE KOSMETOLOGOV (Rasm xatoligi to'g'rilandi) ================= */}
       <section className="edu-categories-section">
         <h2 className="section-main-title">{t.sectionEducation || "Обучение косметологов"}</h2>
         <div className="cats-grid-layout">
           
-          <div className="cat-card grid-large" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('https://via.placeholder.com/600x250')` }}>
+          {/* casmetika rasmi shu yerda to'g'ri chiqarildi */}
+          <div className="cat-card grid-large" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${casmetika})` }}>
             <div className="cat-card-inner">
-              <h3>{t.catCourses || "КУРСЫ КОСМЕТОЛОГИИ"}</h3>
+              <h3 className="cat-card-title-text">{t.catCourses || "КУРСЫ КОСМЕТОЛОГИИ"}</h3>
               <p className="pre-line-text">{t.catCoursesSub || "- эстетическая косметология\n- инъекционная косметология\n- лазерная косметология"}</p>
               <span className="arrow-indicator">➔</span>
             </div>
           </div>
 
-          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card flex-center-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/400x250')` }}>
             <div className="cat-card-inner center-content">
-              <h3>{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
+              <h3 className="cat-card-title-text">{t.catOnline || "ОНЛАЙН ОБУЧЕНИЕ"}</h3>
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('{casmetika}')` }}>
+          {/* Bu yerga ham casmetika rasmi to'g'ri ulandi */}
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${casmetika})` }}>
             <div className="cat-card-inner bottom-align">
-              <h3>{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
+              <h3 className="cat-card-title-text">{t.catMaster || "МАСТЕР-КЛАССЫ"}</h3>
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(${}')` }}>
             <div className="cat-card-inner top-align">
-              <h3>{t.catSchedule || "РАСПИСАНИЕ"}</h3>
+              <h3 className="cat-card-title-text">{t.catSchedule || "РАСПИСАНИЕ"}</h3>
             </div>
           </div>
 
-          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/400x250')` }}>
+          <div className="cat-card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/400x250')` }}>
             <div className="cat-card-inner bottom-align">
-              <h3>{t.catPromo || "АКЦИИ"}</h3>
+              <h3 className="cat-card-title-text">{t.catPromo || "АКЦИИ"}</h3>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* ================= 4. YANGI BO'LIM: VEDEM NABOR MODELEY (image_b17e80.jpg dan 2-blok) ================= */}
+      {/* ================= 4. VEDEM NABOR MODELEY ================= */}
       <section className="model-recruitment-section">
         <div className="model-flex-container">
           
@@ -222,7 +223,7 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 5. YANGI BO'LIM: MASTER-KLASSLAR NARX KARTALARI (image_b17e80.jpg dan 3-blok) ================= */}
+      {/* ================= 5. MASTER-KLASSLAR NARX KARTALARI ================= */}
       <section className="masterclasses-prices-section">
         <h2 className="section-main-title" style={{ marginBottom: '10px' }}>{t.masterClassesTitle || "Мастер-классы"}</h2>
         <p className="master-section-subtitle">{t.masterClassesSub || "Мероприятия для повышения квалификации косметологов"}</p>
@@ -237,7 +238,7 @@ export default function Main({ t }) {
               <div className="master-horizontal-card" key={item.id}>
                 
                 <div className="master-card-img-box">
-                  <img src={item.img} alt={item.title} />
+                  <img src={reca} alt={item.title} className="master-loaded-img" />
                 </div>
                 
                 <div className="master-card-content-box">
