@@ -1,122 +1,147 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState } from 'react';
+// Komponentlarni import qilamiz
+import Header from './Companent/Header/Header'; 
+import Hero from './Companent/Hero/Hero'; 
 
-function App() {
-  const [count, setCount] = useState(0)
+// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + To'g'rilangan Hero)
+const translations = {
+  RU: {
+    // Header qismi
+    courses: "Курсы обучения",
+    webinars: "Вебинары",
+    lessons: "Видео-уроки",
+    blog: "Блог",
+    about: "О нас",
+    price: "Прайс",
+    schedule: "Расписание",
+    promo: "Акции",
+    shop: "Магазин",
+    title: "Учебный центр",
+    subtitle: "эстетической косметологии",
+    welcome: "Добро пожаловать в ValMari!",
+
+    // Hero qismi (image_b2d3de.jpg rasmiga muvofiq to'liq holatda) 🚀
+    heroBadge: "Бесплатный вебинар",
+    heroTitle: "ПРОФЕССИЯ КОСМЕТОЛОГ",
+    heroDesc: "Приглашаем на бесплатный вебинар для профессиональных косметологов и интересующихся этой профессией",
+    btnRegister: "Зарегистрироваться",
+    btnMore: "Узнать подробнее",
+    
+    // Panel qismidagi ikki qatorli matnlar
+    statCertNum: "4000+",
+    statCertTitle: "Сертификатов",
+    statCertSub: "мы выдали",
+
+    statModelNum: "3500+",
+    statModelTitle: "Моделей",
+    statModelSub: "в нашей базе",
+
+    statSpecNum: "1500+",
+    statSpecTitle: "Специалистов",
+    statSpecSub: "мы обучили",
+
+    statClientNum: "5500+",
+    statClientTitle: "Довольных",
+    statClientSub: "клиентов"
+  },
+  UZ: {
+    // Header qismi
+    courses: "O'quv kurslari",
+    webinars: "Vebinarlar",
+    lessons: "Video-darslar",
+    blog: "Blog",
+    about: "Biz haqimizda",
+    price: "Narxlar",
+    schedule: "Jadval",
+    promo: "Aksiyalar",
+    shop: "Do'kon",
+    title: "O'quv markazi",
+    subtitle: "estetik kosmetologiya",
+    welcome: "ValMari-ga xush kelibsiz!",
+
+    // Hero qismi
+    heroBadge: "Bepul vebinar",
+    heroTitle: "KOSMETOLOG KASBI",
+    heroDesc: "Professional kosmetologlar va ushbu kasbga qiziquvchilar uchun bepul vebinarga taklif etamiz",
+    btnRegister: "Ro'yxatdan o'tish",
+    btnMore: "Batafsil ma'lumot",
+    
+    // Panel qismidagi ikki qatorli matnlar
+    statCertNum: "4000+",
+    statCertTitle: "Sertifikatlar",
+    statCertSub: "taqdim etdik",
+
+    statModelNum: "3500+",
+    statModelTitle: "Modellar",
+    statModelSub: "bazamizda bor",
+
+    statSpecNum: "1500+",
+    statSpecTitle: "Mutaxassislar",
+    statSpecSub: "o'qitib chiqardik",
+
+    statClientNum: "5500+",
+    statClientTitle: "Mamnun",
+    statClientSub: "mijozlarimiz"
+  },
+  EN: {
+    // Header qismi
+    courses: "Training Courses",
+    webinars: "Webinars",
+    lessons: "Video Lessons",
+    blog: "Blog",
+    about: "About Us",
+    price: "Price List",
+    schedule: "Schedule",
+    promo: "Promotions",
+    shop: "Shop",
+    title: "Training Center",
+    subtitle: "of aesthetic cosmetology",
+    welcome: "Welcome to ValMari!",
+
+    // Hero qismi
+    heroBadge: "Free Webinar",
+    heroTitle: "COSMETOLOGIST PROFESSION",
+    heroDesc: "We invite you to a free webinar for professional cosmetologists and those interested in this profession",
+    btnRegister: "Register Now",
+    btnMore: "Learn More",
+    
+    // Panel qismidagi ikki qatorli matnlar
+    statCertNum: "4000+",
+    statCertTitle: "Certificates",
+    statCertSub: "we have issued",
+
+    statModelNum: "3500+",
+    statModelTitle: "Models",
+    statModelSub: "in our database",
+
+    statSpecNum: "1500+",
+    statSpecTitle: "Specialists",
+    statSpecSub: "we have trained",
+
+    statClientNum: "5500+",
+    statClientTitle: "Satisfied",
+    statClientSub: "clients"
+  }
+};
+
+export default function App() {
+  // Standart holatda rus tili tanlangan bo'ladi
+  const [currentLang, setCurrentLang] = useState('RU');
+
+  // Tanlangan tilga mos tarjimalarni olamiz
+  const t = translations[currentLang];
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      {/* Yuqori Header qismi */}
+      <Header 
+        currentLang={currentLang} 
+        onChangeLang={setCurrentLang} 
+        t={t} 
+      />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Asosiy Banner (Hero) qismi */}
+      <Hero t={t} />
+    </div>
+  );
 }
-
-export default App

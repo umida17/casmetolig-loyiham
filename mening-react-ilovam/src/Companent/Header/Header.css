@@ -1,0 +1,302 @@
+/* Globallar va Rang o'zgaruvchilari */
+:root {
+  --primary-green: #a3e635; /* ValMari yashil rangi */
+  --dark-green: #65a30d;
+  --text-dark: #2c3e50;
+  --text-light: #5a738e;
+  --white: #ffffff;
+  --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.main-header {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Header Top Section */
+.header-top-container {
+  border-bottom: 1px solid rgba(163, 230, 53, 0.2);
+  padding: 15px 0;
+}
+
+.header-top-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo va Brending */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.logo-circle {
+  background: linear-gradient(135deg, #ccf381 0%, var(--primary-green) 100%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(163, 230, 53, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.logo-section:hover .logo-circle {
+  transform: rotate(360deg) scale(1.05);
+  box-shadow: 0 15px 25px rgba(163, 230, 53, 0.5);
+}
+
+.logo-text-main {
+  font-weight: 700;
+  color: #3a5c00;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.logo-titles h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.logo-titles p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: lowercase;
+}
+
+/* Right Controls (Telefon, Social, Lang) */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 20px;
+  transition: var(--transition-smooth);
+}
+
+.phone-icon-wrapper {
+  background: rgba(163, 230, 53, 0.15);
+  color: var(--dark-green);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.phone-link:hover .phone-icon-wrapper {
+  background: var(--primary-green);
+  color: white;
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 15px rgba(163, 230, 53, 0.6);
+}
+
+.phone-link:hover .phone-number {
+  color: var(--dark-green);
+}
+
+/* Social Media Ikonkalari */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.social-icon.fb { background-color: #1877f2; }
+.social-icon.ig { background-color: #e1306c; }
+
+.social-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+/* Premium Language Selector */
+.lang-dropdown {
+  position: relative;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+.lang-dropdown:hover {
+  border-color: var(--primary-green);
+  background-color: rgba(163, 230, 53, 0.05);
+}
+
+.lang-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-icon {
+  font-size: 10px;
+  color: var(--text-light);
+  transition: transform 0.3s;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.lang-list {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #f1f5f9;
+  min-width: 90px;
+  animation: slideDown 0.3s ease;
+}
+
+.lang-list li {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  transition: background 0.2s;
+}
+
+.lang-list li:hover {
+  background: rgba(163, 230, 53, 0.1);
+  color: var(--dark-green);
+}
+
+/* Bayroqlar uchun tayyor css (Rasmdagi Rossiya bayrog'i simulyatsiyasi) */
+.flag-icon {
+  width: 22px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.ru-flag { background: linear-gradient(#fff 33.3%, #0039a6 33.3%, #0039a6 66.6%, #d52b1e 66.6%); }
+.uz-flag { background: linear-gradient(#0099b5 33.3%, #fff 33.3%, #fff 66.6%, #1eb53a 66.6%); } /* Soddalashtirilgan */
+.en-flag { background: #00247d; } /* Soddalashtirilgan */
+
+/* --- NAVIGATSIYA MENUSI --- */
+.header-navigation {
+  background: var(--white);
+  padding: 5px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 5px;
+  display: block;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+/* Elegant Chiziqli Hover Effekti */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary-green);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover {
+  color: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Aktiv Menyuning ko'rinishi */
+.nav-link.active {
+  color: var(--dark-green);
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+}
+
+/* Animatsiyalar */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil qurilmalar uchun moslashuvchanlik */
+@media (max-width: 992px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .header-top-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

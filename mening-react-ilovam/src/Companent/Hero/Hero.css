@@ -1,0 +1,277 @@
+/* Hero section uchun maxsus ranglar va animatsiyalar */
+.hero-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e1fbd4 100%);
+  position: relative;
+  padding: 100px 0 120px 0; /* padding-top 100px qilib birlashtirildi */
+  
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Chap qism dizayni */
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+  z-index: 5;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.hero-badge {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4d7c0f;
+  background-color: rgba(163, 230, 53, 0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #3f6212;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Tugmalar va ularning effektlari */
+.hero-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-main {
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4d7c0f;
+  border: 2px solid #84cc16;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Effektlar: Hover holati */
+.btn-main:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(101, 163, 13, 0.4);
+}
+
+.btn-outline:hover {
+  background-color: rgba(163, 230, 53, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Tugmaning pulslanuvchi porlashi */
+.btn-glow {
+  position: relative;
+}
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7);
+  animation: pulsingGlow 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+/* O'ng tomon: Rasm qismi */
+.hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeInRight 1s ease-out;
+}
+
+.hero-main-img {
+  max-width: 100%;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+  transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover .hero-main-img {
+  transform: scale(1.03) translateY(-5px);
+}
+
+/* Orqa fondagi dumaloq dekoratsiya */
+.hero-bg-circle-dec {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(163, 230, 53, 0.15);
+  border-radius: 50%;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* --- STATISTIKA PANELI (Rasmga moslab to'g'rilangan qism) --- */
+.stats-panel-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px 20px; /* Ichki bo'shliq rasmga moslab kengaytirildi */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  position: absolute;
+  bottom: -60px; /* Panel joylashuvi to'g'rilandi */
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  animation: slideUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 42px; /* Sonlar rasmga mos ravishda kattalashtirildi */
+  font-weight: 800;
+  color: #84cc16;
+  margin: 0 0 6px 0;
+  letter-spacing: -1px;
+}
+
+/* Ikki qatorli matnlar uchun guruh klassi */
+.stat-label-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Birinchi qatordagi asosiy so'z (masalan: Сертификатов) */
+.stat-main-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5563; /* To'qroq kulrang */
+}
+
+/* Ikkinchi qatordagi qo'shimcha so'z (masalan: мы выдали) */
+.stat-sub-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280; /* Ochroq mayda kulrang */
+}
+
+/* --- ANIMATSIYALAR --- */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulsingGlow {
+  to { box-shadow: 0 0 0 15px rgba(132, 204, 22, 0); }
+}
+
+/* --- RESPONSIVE (MOSLASHUVCHANLIK) --- */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-bg-circle-dec {
+    width: 300px;
+    height: 300px;
+  }
+
+  .stats-panel-container {
+    position: relative;
+    bottom: 0;
+    margin-top: 40px;
+  }
+
+  .stats-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .stat-card {
+    flex: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    flex: 100%;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+}
