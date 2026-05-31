@@ -1,7 +1,8 @@
 import React from 'react';
 import './Hero.css';
-// Xatolik to'g'rilandi: O'zgaruvchi nomi harf bilan boshlanishi shart! ✅
-import heroImg from './assets/13131.png';
+
+
+ import heroImg from '../../assets/13131.png';
 
 export default function Hero({ t }) {
   // Rasmga muvofiq, son, asosiy so'z va uning tagidagi so'zni alohida qilib massivga yozamiz
