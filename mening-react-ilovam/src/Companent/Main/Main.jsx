@@ -18,12 +18,10 @@ import recta from '../../assets/Rectangle 296.png'
 export default function Main({ t }) {
   const [activeDot, setActiveDot] = useState(0);
 
-  // Inputlar uchun statelar
-  const [name, setName] = useState('');
+   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  // Kurs ma'lumotlari strukturasi
-  const coursesData = [
+   const coursesData = [
     {
       id: 1,
       type: "purple",
@@ -53,8 +51,7 @@ export default function Main({ t }) {
     }
   ];
 
-  // Master-klasslar ro'yxati
-  const masterClassesData = [
+   const masterClassesData = [
     {
       id: 1,
       date: "3 ноября, 10:00-12:00",
@@ -75,12 +72,10 @@ export default function Main({ t }) {
     }
   ];
 
-  // Formani yuborish funksiyasi
-  const handleSubmit = (e) => {
+   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Yuborilgan ma'lumotlar:", { name, phone });
-    // Bu yerda Telegram bot yoki API kodingiz bo'ladi
-  };
+   };
 
   return (
     <main className="main-content-wrapper">
