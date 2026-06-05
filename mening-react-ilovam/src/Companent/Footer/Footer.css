@@ -158,10 +158,9 @@
   color: #cccccc;
 }
 
-/* ====== RESPONSIVE (Mobil qurilmalar uchun moslashuvchanlik) ====== */
-@media (max-width: 992px) {
+ @media (max-width: 992px) {
   .footer-split-layout {
-    flex-direction: column-reverse; /* Mobilda xarita pastga tushadi */
+    flex-direction: column-reverse;  
   }
 
   .footer-map-wrapper {
