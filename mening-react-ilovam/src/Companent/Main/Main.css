@@ -588,15 +588,13 @@
   color: rgba(229, 231, 235, 0.5);
   line-height: 1;
   z-index: 1;
-  user-select: none;
-}
+ }
 
 .card-bg-green .why-card-number {
   color: rgba(134, 239, 172, 0.4);
 }
 
-/* ================= 7. SPECIAL OFFERS STILI ================= */
-.special-offers-section {
+ .special-offers-section {
   margin-top: 140px;
   margin-bottom: 120px;
 }
@@ -627,8 +625,7 @@
   transform: scale(1.02);
 }
 
-/* ================= 8. CALLBACK FORM STILI ================= */
-.callback-form-section {
+ .callback-form-section {
   margin-top: 140px;
   margin-bottom: 80px;
   display: flex;
@@ -705,8 +702,7 @@
   background-color: #4d7c0f;
 }
 
-/* --- RESPONSIVE MOBILE VARIANT --- */
-@media (max-width: 992px) {
+ @media (max-width: 992px) {
   .courses-grid, 
   .about-flex-layout, 
   .cats-grid-layout, 
