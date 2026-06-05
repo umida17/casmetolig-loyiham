@@ -201,8 +201,7 @@
   color: var(--dark-green);
 }
 
-/* Bayroqlar uchun tayyor css (Rasmdagi Rossiya bayrog'i simulyatsiyasi) */
-.flag-icon {
+ .flag-icon {
   width: 22px;
   height: 14px;
   display: inline-block;
