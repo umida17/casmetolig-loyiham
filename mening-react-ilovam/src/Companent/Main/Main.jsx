@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './Main.css';
 
-// Loyihadagi rasmlar importi
-import aboutImage from '../../assets/Rectangle 111.png';
+ import aboutImage from '../../assets/Rectangle 111.png';
 import hom from '../../assets/image (27).png';
 import casmetika from '../../assets/casmetika.png';
 import cas from '../../assets/Rectangle 108.png';
@@ -80,8 +79,7 @@ export default function Main({ t }) {
   return (
     <main className="main-content-wrapper">
       
-      {/* ================= 1. KURSLAR SEKSIYASI ================= */}
-      <section className="courses-section">
+       <section className="courses-section">
         <h2 className="section-main-title">{t.coursesTitle}</h2>
         
         <div className="slider-container">
