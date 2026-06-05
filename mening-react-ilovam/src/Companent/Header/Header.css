@@ -242,8 +242,7 @@
   transition: var(--transition-smooth);
 }
 
-/* Elegant Chiziqli Hover Effekti */
-.nav-link::after {
+ .nav-link::after {
   content: '';
   position: absolute;
   bottom: 8px;
@@ -264,8 +263,7 @@
   width: 100%;
 }
 
-/* Aktiv Menyuning ko'rinishi */
-.nav-link.active {
+ .nav-link.active {
   color: var(--dark-green);
   font-weight: 700;
 }
@@ -275,14 +273,12 @@
   background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
 }
 
-/* Animatsiyalar */
-@keyframes slideDown {
+ @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobil qurilmalar uchun moslashuvchanlik */
-@media (max-width: 992px) {
+ @media (max-width: 992px) {
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
