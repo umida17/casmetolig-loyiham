@@ -275,8 +275,7 @@
 }
 .about-arrow-link:hover .long-arrow-line { width: 80px; }
 
-/* ================= 3. OBUCHENIE KOSMETOLOGOV STILI ================= */
-.edu-categories-section {
+ .edu-categories-section {
   margin-top: 140px;
   margin-bottom: 100px;
 }
@@ -348,8 +347,7 @@
 .bottom-align { justify-content: flex-end; }
 .top-align { justify-content: flex-start; }
 
-/* ================= 4. MODEL RECRUITMENT STILI ================= */
-.model-recruitment-section {
+ .model-recruitment-section {
   margin-bottom: 120px;
   margin-top: 150px;
 }
