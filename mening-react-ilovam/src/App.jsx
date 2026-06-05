@@ -112,8 +112,7 @@ const translations = {
     masterClass: "Master-klass",
     freeSeats: "15 ta joydan {seats} tasi bo'sh",
 
-    // ================= Main (Biz haqimizda) qismi =================
-    aboutTitle: "Biz haqimizda",
+     aboutTitle: "Biz haqimizda",
     aboutBrandTitle: "ESTETIK KOSMETOLOGIYA BO'YICHA YETAKCHI O'QUV MARKAZI",
     aboutDesc1: "Tavsif ixtiyoriy bo'lishi mumkin.",
     aboutDesc2: "Estetik kosmetologiya bo'yicha yetakchi o'quv markazi.",
