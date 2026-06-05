@@ -111,8 +111,7 @@
   text-decoration: underline;
 }
 
-/* Ijtimoiy tarmoqlar qatori */
-.footer-socials-row {
+ .footer-socials-row {
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
@@ -141,8 +140,7 @@
   border: 0;
 }
 
-/* Maxfiylik siyosati qismi */
-.footer-policy-bottom {
+ .footer-policy-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
 }
