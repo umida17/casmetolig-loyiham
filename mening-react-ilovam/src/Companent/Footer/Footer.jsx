@@ -42,8 +42,7 @@ export default function Footer({ t }) {
               <div className="footer-logo-circle">ValMari</div>
             </div>
 
-            {/* Phone & Address */}
-            <div className="footer-contacts-zone">
+             <div className="footer-contacts-zone">
               <a href="tel:0800508622" className="footer-phone-link">
                 0 (800) 508-622
               </a>
@@ -52,8 +51,7 @@ export default function Footer({ t }) {
               </p>
             </div>
 
-            {/* Navigation Grid Links */}
-            <div className="footer-nav-grid">
+             <div className="footer-nav-grid">
               <ul className="footer-links-col">
                 {linksLeft.map((link, idx) => (
                   <li key={idx}>
@@ -70,8 +68,7 @@ export default function Footer({ t }) {
               </ul>
             </div>
 
-            {/* Social Media Icons */}
-            <div className="footer-socials-row">
+             <div className="footer-socials-row">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon-btn">
                 <i className="fab fa-facebook-f"></i>
                 {/* Agar ikonka shrifti bo'lmasa, oddiy SVG ishlatsangiz ham bo'ladi */}
@@ -83,8 +80,7 @@ export default function Footer({ t }) {
               </a>
             </div>
 
-            {/* Privacy Policy Bottom */}
-            <div className="footer-policy-bottom">
+             <div className="footer-policy-bottom">
               <a href="#privacy" className="footer-privacy-link">
                 Политика конфиденциальности
               </a>
