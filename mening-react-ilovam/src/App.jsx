@@ -105,8 +105,7 @@ const translations = {
     statClientTitle: "Mamnun",
     statClientSub: "mijozlarimiz",
 
-    // ================= Main (O'quv kurslari) qismi =================
-    coursesTitle: "O'quv kurslari",
+     coursesTitle: "O'quv kurslari",
     forMedics: "Shifokorlar uchun kurs",
     offline: "Offlayn",
     online: "Onlayn",
