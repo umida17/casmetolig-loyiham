@@ -105,14 +105,16 @@ const translations = {
     statClientTitle: "Mamnun",
     statClientSub: "mijozlarimiz",
 
-     coursesTitle: "O'quv kurslari",
+    // ================= Main (O'quv kurslari) qismi =================
+    coursesTitle: "O'quv kurslari",
     forMedics: "Shifokorlar uchun kurs",
     offline: "Offlayn",
     online: "Onlayn",
     masterClass: "Master-klass",
     freeSeats: "15 ta joydan {seats} tasi bo'sh",
 
-     aboutTitle: "Biz haqimizda",
+    // ================= Main (Biz haqimizda) qismi =================
+    aboutTitle: "Biz haqimizda",
     aboutBrandTitle: "ESTETIK KOSMETOLOGIYA BO'YICHA YETAKCHI O'QUV MARKAZI",
     aboutDesc1: "Tavsif ixtiyoriy bo'lishi mumkin.",
     aboutDesc2: "Estetik kosmetologiya bo'yicha yetakchi o'quv markazi.",
