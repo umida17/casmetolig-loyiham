@@ -6,8 +6,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ================= Sarlavhalar uchun umumiy qoidalar ================= */
-.section-main-title {
+ .section-main-title {
   font-size: 36px;
   font-weight: 700;
   color: #1f2937;
@@ -17,8 +16,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Birinchi Title tepadan joy ajratishi uchun */
-.courses-section .section-main-title {
+ .courses-section .section-main-title {
   margin-top: 0px;
 }
 
@@ -161,8 +159,7 @@
   background: transparent;
 }
 
-/* --- THEME VARIATIONS --- */
-.theme-purple .course-card-title { color: #4338ca; }
+ .theme-purple .course-card-title { color: #4338ca; }
 .theme-purple .course-status-badge { background-color: #4338ca; }
 .theme-purple .btn-card-reg { background-color: #4338ca; }
 .theme-purple .btn-card-more { color: #4338ca; background-color: #eedffc; }
