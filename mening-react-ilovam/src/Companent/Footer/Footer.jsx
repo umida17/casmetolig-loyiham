@@ -24,8 +24,7 @@ export default function Footer({ t }) {
     <footer className="footer-section-container">
       <div className="footer-split-layout">
         
-        {/* LEFT SIDE: Google Map */}
-        {/* LEFT SIDE: Shunchaki Xarita Rasmi */}
+        
     <div className="footer-map-wrapper">
   <img 
     src={xarita} 
