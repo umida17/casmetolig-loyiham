@@ -171,8 +171,7 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 3. OBUCHENIE KOSMETOLOGOV ================= */}
-      <section className="edu-categories-section">
+       <section className="edu-categories-section">
         <h2 className="section-main-title">{t.sectionEducation || "Обучение косметологов"}</h2>
         <div className="cats-grid-layout">
           
