@@ -138,16 +138,15 @@
   z-index: 1;
 }
 
-/* --- STATISTIKA PANELI (Rasmga moslab to'g'rilangan qism) --- */
-.stats-panel-container {
+ .stats-panel-container {
   max-width: 1160px;
   margin: 0 auto;
   background: #ffffff;
   border-radius: 16px;
-  padding: 35px 20px; /* Ichki bo'shliq rasmga moslab kengaytirildi */
+  padding: 35px 20px;  
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
   position: absolute;
-  bottom: -60px; /* Panel joylashuvi to'g'rilandi */
+  bottom: -60px;  
   left: 20px;
   right: 20px;
   z-index: 10;
