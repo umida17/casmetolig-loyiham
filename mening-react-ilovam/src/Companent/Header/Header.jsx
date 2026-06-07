@@ -24,7 +24,7 @@ export default function Header({ currentLang, onChangeLang, t }) {
   ];
 
   const handleLangSelect = (langCode) => {
-    onChangeLang(langCode); // App.jsx dagi tilni yangilaydi
+    onChangeLang(langCode); 
     setLangOpen(false);      // Menyuni yopadi
   };
 
