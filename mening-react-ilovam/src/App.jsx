@@ -190,8 +190,7 @@ export default function App() {
 
   return (
     <div>
-      {/* Yuqori Header qismi */}
-      <Header 
+       <Header 
         currentLang={currentLang} 
         onChangeLang={setCurrentLang} 
         t={t} 
