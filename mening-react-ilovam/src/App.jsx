@@ -6,8 +6,7 @@ import Main from './Companent/Main/Main';
 // Yangi Footer komponentini loyihaga qo'shamiz 🚀
 import Footer from './Companent/Footer/Footer'; 
 
-// Saytdagi barcha matnlarning tillardagi tarjimasi (Header + Hero + Main + Footer)
-const translations = {
+ const translations = {
   RU: {
     // Header qismi
     courses: "Курсы обучения",
