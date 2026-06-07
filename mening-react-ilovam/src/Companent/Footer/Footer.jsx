@@ -71,8 +71,7 @@ export default function Footer({ t }) {
              <div className="footer-socials-row">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon-btn">
                 <i className="fab fa-facebook-f"></i>
-                {/* Agar ikonka shrifti bo'lmasa, oddiy SVG ishlatsangiz ham bo'ladi */}
-                <span className="sr-only">Facebook</span>
+                 <span className="sr-only">Facebook</span>
               </a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon-btn">
                 <i className="fab fa-instagram"></i>
