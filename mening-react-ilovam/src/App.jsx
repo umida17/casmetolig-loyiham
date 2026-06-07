@@ -198,8 +198,7 @@ export default function App() {
 
        <Hero t={t} />
 
-      {/* Saytning o'rta qismi (Kurslar va Biz haqimizda) */}
-      <Main t={{ ...t, currentLang: currentLang }} />
+       <Main t={{ ...t, currentLang: currentLang }} />
 
       {/* 🌟 YANGI QISM: Footer (Xarita va Aloqa bloklari bilan) */}
       <Footer t={t} />
