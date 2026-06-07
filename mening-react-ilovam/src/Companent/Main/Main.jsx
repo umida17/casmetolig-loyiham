@@ -138,8 +138,7 @@ export default function Main({ t }) {
         </div>
       </section>
 
-      {/* ================= 2. BIZ HAQIMIZDA SEKSIYASI ================= */}
-      <section className="about-section-container">
+       <section className="about-section-container">
         <div className="about-flex-layout">
           
           <div className="about-media-block">
