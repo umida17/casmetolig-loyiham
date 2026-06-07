@@ -4,8 +4,7 @@ import xarita from '../../assets/image 21.png';
 
 
 export default function Footer({ t }) {
-  // Figma dizayndagi havolalar (agar i18n tarjimalari bo'lsa t.bilan ishlating)
-  const linksLeft = [
+   const linksLeft = [
     { text: t?.courses || "Курсы обучения", url: "#courses" },
     { text: t?.webinars || "Вебинары", url: "#webinars" },
     { text: t?.videoLessons || "Видео-уроки", url: "#videos" },
