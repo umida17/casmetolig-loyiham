@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// Komponentlarni import qilamiz
+
 import Header from './Companent/Header/Header'; 
 import Hero from './Companent/Hero/Hero'; 
 import Main from './Companent/Main/Main'; 
