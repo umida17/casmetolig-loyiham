@@ -138,7 +138,8 @@ export default function Main({ t }) {
         </div>
       </section>
 
-       <section className="about-section-container">
+      {/* ================= 2. BIZ HAQIMIZDA SEKSIYASI ================= */}
+      <section className="about-section-container">
         <div className="about-flex-layout">
           
           <div className="about-media-block">
