@@ -178,18 +178,16 @@
   letter-spacing: -1px;
 }
 
-/* Ikki qatorli matnlar uchun guruh klassi */
-.stat-label-group {
+ .stat-label-group {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-/* Birinchi qatordagi asosiy so'z (masalan: Сертификатов) */
-.stat-main-text {
+ .stat-main-text {
   font-size: 16px;
   font-weight: 600;
-  color: #4b5563; /* To'qroq kulrang */
+  color: #4b5563; 
 }
 
 /* Ikkinchi qatordagi qo'shimcha so'z (masalan: мы выдали) */
