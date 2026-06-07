@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Header from './Companent/Header/Header'; 
 import Hero from './Companent/Hero/Hero'; 
 import Main from './Companent/Main/Main'; 
-// Yangi Footer komponentini loyihaga qo'shamiz 🚀
+
 import Footer from './Companent/Footer/Footer'; 
 
  const translations = {
