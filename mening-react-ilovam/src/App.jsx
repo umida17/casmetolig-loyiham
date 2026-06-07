@@ -196,8 +196,7 @@ export default function App() {
         t={t} 
       />
 
-      {/* Asosiy Banner (Hero) qismi */}
-      <Hero t={t} />
+       <Hero t={t} />
 
       {/* Saytning o'rta qismi (Kurslar va Biz haqimizda) */}
       <Main t={{ ...t, currentLang: currentLang }} />
