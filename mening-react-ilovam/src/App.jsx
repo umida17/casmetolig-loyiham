@@ -178,8 +178,7 @@ const translations = {
     aboutDesc2: "Leading training center of aesthetic cosmetology.",
     aboutDesc3: "For more than 5 years we have been conducting certified professional education courses in the field of cosmetology and the industry of beauty, health and youth.",
 
-    // ================= NEW: Footer qismi =================
-    addressText: "Kharkiv, Klochkivska St, 3",
+     addressText: "Kharkiv, Klochkivska St, 3",
     privacyPolicy: "Privacy Policy"
   }
 };
